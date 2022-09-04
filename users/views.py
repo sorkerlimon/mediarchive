@@ -70,7 +70,7 @@ def registerUser(request):
             messages.success(request,'User Registration Successfully Registered')
             
             login(request, user)
-            return redirect('dashboard')
+            return redirect('profile')
         else:
             messages.error(request,'An error occurred while registering user')
     

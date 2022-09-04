@@ -565,6 +565,8 @@ img {
   Account Settings
 ========================*/
 
+
+
 .settingsPage .dev > .settings__btn {
   display: inline-block;
   margin-bottom: 3rem;
@@ -592,14 +594,17 @@ img {
 
 .settings__table tr {
   width: 100%;
+  
 }
 
 .settings__table tr > td {
   padding: 2rem 0;
+  
 }
 
 .settings__table tr:not(:last-child) td {
   border-bottom: 2px solid var(--color-white-light);
+  
 }
 
 .settings__thumbnail {

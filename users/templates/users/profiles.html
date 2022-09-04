@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+
+{% for p in profile %}
+{{ p }}
+{{ p.location }}
+{{ p.email }}
+{{ p.gender }}
+{{ p.blood }}
+{{ p.phone_number }}
+{{ p.dob }}
+{{ p.id }}
+
+<br>
+{% endfor %}
+
+
+{% endblock  %}

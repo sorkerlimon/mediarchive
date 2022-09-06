@@ -8,10 +8,27 @@ def developer(request):
 
 @login_required(login_url='login')
 def analysis(request):
-    return render(request, "medical_report/analysis.html")
+    return render(request, "medical_report/blood_analysis.html")
+
+
+@login_required(login_url='login')
+def bloodAnalysis(request):
+    return render(request, "medical_report/blood_analysis.html")
+
+@login_required(login_url='login')
+def urinAnalysis(request):
+    return render(request, "medical_report/urin_analysis.html")
 
 
 @login_required(login_url='login')
 def addImage(request):
-    return render(request, "medical_report/addImage.html")
+    return render(request, "medical_report/blood_image_add.html")
+
+@login_required(login_url='login')
+def bloodImage(request):
+    return render(request, "medical_report/blood_image_add.html")
+
+@login_required(login_url='login')
+def urinImage(request):
+    return render(request, "medical_report/urin_image_add.html")
 

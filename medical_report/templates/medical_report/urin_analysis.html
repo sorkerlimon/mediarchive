@@ -1,125 +1,18 @@
 {% extends 'main.html' %}
 {% load static %}
 
-{% block content %}
-
+{% block content  %}
 <div class="container">
-    <div class=" ">
+    <br><br>
 
-        <h3>Blood Test</h3>
-        <table class="content-table">
-            <thead>
-            <tr>
-                <th>Date</th>
-                <th>Himu</th>
-                <th>RBC</th>
-                <th>WBC</th>
-                <th>Platelates</th>
-                <th>ESR</th>
-                <th>Neutrophil</th>
-                <th>Lymphosyte</th>
-                <th>MCV</th>
-                <th>MCH</th>
-                <td>View</td>
-                
-            </tr>
-            </thead>
-            <tbody >
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>3.4</td>
-                <td>8.8</td>
-                <td>Show</td>
-                
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>8.8</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            </tbody>
-        </table>
-        <li ><a href="" class="btn btn--sub">Visualize</a></li>
+    <a href="{% url 'bloodAnalysis' %}" class="btn btn--sub">Blood</a>
+    <a href="{% url 'urinAnalysis' %}" class="btn btn--sub">Urin</a>
+    <a href="" class="btn btn--sub">Diabaties</a>
+    <a href="" class="btn btn--sub">X-Ray</a>
 
+    <br><br>
 
-    </div>
-
-    <div class=" ">
-
-        
+    <div class=" ">     
         <h3>Urin Test</h3>
         <table class="content-table">
             <thead>
@@ -222,7 +115,5 @@
         <li ><a href="" class="btn btn--sub">Visualize</a></li>
     </div>
 </div>
-
-
 
 {% endblock  %}

@@ -35,4 +35,4 @@ class Profile(models.Model):
     phone_number = PhoneNumberField(blank=True,null=True)
 
     def __str__(self):
-        return str(self.username)
+        return f'Profile of {str(self.user)}'

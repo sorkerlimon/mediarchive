@@ -10,6 +10,8 @@
         <a href="" class="btn btn--sub">X-Ray</a>
     <br><br>
 
+    
+
     <div class=" ">
         <h3>Blood Test</h3>
         <table class="content-table">
@@ -30,94 +32,33 @@
             </tr>
             </thead>
             <tbody >
+            
+            {% for blood_report in blood_reports %}
             <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>3.4</td>
-                <td>8.8</td>
-                <td>Show</td>
                 
+                <td>{{  blood_report.created }}</td>
+                <td>{{  blood_report.Hemoglobin }}</td>
+                <td>{{  blood_report.RBC }}</td>
+                <td>{{  blood_report.WBC }}</td>
+                <td>{{  blood_report.Platelets }}</td>
+                <td>{{  blood_report.ESR }}</td>
+                <td>{{  blood_report.Neutrophil }}</td>
+                <td>{{  blood_report.Lymphocyte }}</td>
+                <td>{{  blood_report.MCV }}</td>
+                <td>{{  blood_report.MCH }}</td>
+                <td>Show</td>
+            
                 
             </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>8.8</td>
-                <td>Show</td>
-                
-            </tr>
-            <tr class="active-row">
-                <td>2022-05-23</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>0.3</td>
-                <td>8.8</td>
-                <td>3.4</td>
-                <td>Show</td>
-                
-            </tr>
+            {% endfor %}   
             </tbody>
         </table>
-        <li ><a href="" class="btn btn--sub">Visualize</a></li>
+        <a href="" class="btn btn--sub">Himu</a>
+        <a href="" class="btn btn--sub">RBC</a>
+        <a href="" class="btn btn--sub">WBC</a>
+
+
+        
     </div>
 
 </div>

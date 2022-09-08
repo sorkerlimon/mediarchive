@@ -13,7 +13,10 @@ from .models import Profile
 # Create your views here.
 @login_required(login_url='login')
 def profile(request):
-    profile = Profile.objects.all()
+    # profile = Profile.objects.all()
+    current_user = request.user
+    # print (current_user.username)
+    profile = Profile.objects.get(user = current_user)
     return render(request, 'users/profiles.html',{"profile": profile})
 
 

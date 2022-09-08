@@ -2,20 +2,12 @@
 
 
 {% block content %}
-
-
-{% for p in profile %}
-{{ p }}
-{{ p.location }}
-{{ p.email }}
-{{ p.gender }}
-{{ p.blood }}
-{{ p.phone_number }}
-{{ p.dob }}
-{{ p.id }}
-
-<br>
-{% endfor %}
-
-
+{{ profile.username }} <br>
+{{ profile.email }} <br>
+{{ profile.location }} <br>
+{{ profile.gender }} <br>
+{{ profile.blood }} <br>
+{{ profile.created }} <br>
+{{ profile.dob }} <br> 
+{{ profile.phone_number }} <br> 
 {% endblock  %}

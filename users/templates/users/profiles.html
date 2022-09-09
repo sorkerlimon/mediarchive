@@ -1,13 +1,69 @@
 {% extends 'main.html' %}
-
+{% load static %}
 
 {% block content %}
-{{ profile.username }} <br>
-{{ profile.email }} <br>
-{{ profile.location }} <br>
-{{ profile.gender }} <br>
-{{ profile.blood }} <br>
-{{ profile.created }} <br>
-{{ profile.dob }} <br> 
-{{ profile.phone_number }} <br> 
+
+<!-- Main Section -->
+<main class="settingsPage profile my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          <div class="card text-center">
+
+            <div class="card__body dev">
+              <a class="tag tag--pill tag--main settings__btn" href=""><i class="im im-edit"></i>
+                Edit</a>
+              <img class="avatar avatar--xl dev__avatar" src="{{ profile.profile_image.url }}" />
+              <h2 class="dev__name">{{ profile.name }}</h2> 
+              <p class="dev__location">Location : {{ profile.location }}</p> 
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="column column--2of3">
+
+            <div class="card__body dev">
+                
+                <h2 class="dev__name">Email</h2> 
+                <p class="dev__location"> {{ profile.email }} <a class="tag tag--pill tag--main settings__btn" href=""><i class="im im-edit"></i>
+                    Edit</a> 
+                </p> 
+            </div>
+
+            <div class="card__body dev">
+  
+                <h2 class="dev__name">Gender</h2> 
+                <p class="dev__location"> {{ profile.gender }}<a class="tag tag--pill tag--main settings__btn" href=""><i class="im im-edit"></i>
+                    Edit</a> </p> 
+            </div>
+
+            <div class="card__body dev">
+                <h2 class="dev__name">Blood</h2> 
+                <p class="dev__location"> {{ profile.blood }} <a class="tag tag--pill tag--main settings__btn" href=""><i class="im im-edit"></i>
+                    Edit</a> </p> 
+            </div>
+
+            <div class="card__body dev">
+       
+                <h2 class="dev__name">Phone Number</h2> 
+                <p class="dev__location"> {{ profile.phone_number }} <a class="tag tag--pill tag--main settings__btn" href=""><i class="im im-edit"></i>
+                    Edit</a> </p> 
+            </div>
+
+            <div class="card__body dev">
+
+                <h2 class="dev__name">Date Of Birth</h2> 
+                <p class="dev__location"> {{ profile.dob }} <a class="tag tag--pill tag--main settings__btn" href=""><i class="im im-edit"></i>
+                    Edit</a></p> 
+            </div>
+
+        </div> 
+      </div>
+    </div>
+  </main>
+
+
 {% endblock  %}

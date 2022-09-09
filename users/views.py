@@ -14,10 +14,12 @@ from .models import Profile
 @login_required(login_url='login')
 def profile(request):
     # profile = Profile.objects.all()
-    current_user = request.user
+    # current_user = request.user
+    profile = request.user.profile
     # print (current_user.username)
-    profile = Profile.objects.get(user = current_user)
-    return render(request, 'users/profiles.html',{"profile": profile})
+    # profile = Profile.objects.get(user = current_user)
+    context = {'profile': profile}
+    return render(request, 'users/profiles.html',context)
 
 
 

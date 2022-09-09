@@ -33,24 +33,24 @@
             </thead>
             <tbody >
             
-            {% for blood_report in blood_reports %}
-            <tr class="active-row">
+                {% for p in pr %}
+                <tr class="active-row">
+                    
+                    <td>{{  p.created }}</td>
+                    <td>{{  p.hemoglobin }}</td>
+                    <td>{{  p.rbc }}</td>
+                    <td>{{  p.wbc }}</td>
+                    <td>{{  p.platelets }}</td>
+                    <td>{{  p.esr }}</td>
+                    <td>{{  p.neutrophil }}</td>
+                    <td>{{  p.lymphocyte }}</td>
+                    <td>{{  p.mcv }}</td>
+                    <td>{{  p.mch }}</td>
+                    <td>Show</td>
                 
-                <td>{{  blood_report.created }}</td>
-                <td>{{  blood_report.hemoglobin }}</td>
-                <td>{{  blood_report.rbc }}</td>
-                <td>{{  blood_report.wbc }}</td>
-                <td>{{  blood_report.platelets }}</td>
-                <td>{{  blood_report.esr }}</td>
-                <td>{{  blood_report.neutrophil }}</td>
-                <td>{{  blood_report.lymphocyte }}</td>
-                <td>{{  blood_report.mcv }}</td>
-                <td>{{  blood_report.mch }}</td>
-                <td>Show</td>
-            
-                
-            </tr>
-            {% endfor %}   
+                    
+                </tr>
+                {% endfor %}    
             </tbody>
         </table>
         <a href="" class="btn btn--sub">Himu</a>

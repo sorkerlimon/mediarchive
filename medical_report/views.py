@@ -14,11 +14,9 @@ def analysis(request):
 
 @login_required(login_url='login')
 def bloodAnalysis(request):
-    blood_reports = Blood_report.objects.all()
-    context = {
-
-        'blood_reports': blood_reports,
-    }
+    profile = request.user.profile
+    pr = profile.blood_report_set.all()
+    context = {'pr': pr}
     return render(request, "medical_report/blood_analysis.html",context)
 
 @login_required(login_url='login')

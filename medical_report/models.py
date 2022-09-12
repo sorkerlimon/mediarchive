@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from users.models import Profile
 import uuid
+from django.utils.timezone import now  
 
 
 class Blood_report(models.Model):
@@ -23,4 +24,13 @@ class Blood_report(models.Model):
         return f'{str(self.blood_owner)} Blood report'
 
     
+
+class Imageadd(models.Model):
+    image_owner = models.ForeignKey(Profile,null=True,blank=True,on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, blank="True")
+    image = models.ImageField(default='default.jpg',upload_to='blood/')
+    date = models.DateTimeField(default=now)
+
     
+    def __str__(self):
+        return str(self.name)

@@ -9,9 +9,14 @@
         <a href="" class="btn btn--sub">Diabaties Image</a>
         <a href="" class="btn btn--sub">X-Ray Image</a>
     <br><br>
-
     <div class=" ">
-       
+        <h1>Add Image</h1>
+
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p  }}
+            <button type="submit">Upload</button>
+        </form>
     </div>
 
 </div>

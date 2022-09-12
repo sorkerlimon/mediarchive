@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from .models import Blood_report
-
+from .forms import ImageAddForm
 # Create your views here.
 
 def developer(request):
@@ -30,7 +30,16 @@ def addImage(request):
 
 @login_required(login_url='login')
 def bloodImage(request):
-    return render(request, "medical_report/blood_image_add.html")
+    if request.method == 'POST':
+        form = ImageAddForm(request.POST , request.FILES)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.image_owner = request.user.profile
+            instance.save()
+            return redirect('bloodImage')
+    else:
+        form = ImageAddForm()
+    return render(request, "medical_report/blood_image_add.html",{'form':form})
 
 @login_required(login_url='login')
 def urinImage(request):

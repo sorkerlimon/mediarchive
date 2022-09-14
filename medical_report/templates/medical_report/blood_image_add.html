@@ -10,7 +10,7 @@
         <a href="" class="btn btn--sub">X-Ray Image</a>
     <br><br>
     <div class=" ">
-        <h1>Add Image</h1>
+
 
         <form method = "post" enctype="multipart/form-data">
             {% csrf_token %}
@@ -18,6 +18,24 @@
             <button type="submit">Upload</button>
         </form>
     </div>
+
+    <br><br>
+
+
+    <div class="">
+    
+        {% for p in pr %}
+        <h5 class="hospital_name">Hospital Name: {{ p.name }} </h5>
+        <br>
+        <img src="{{ p.image.url }}" alt="This for image" height="500" width="450" />
+        <br>
+        <br>
+        <br>
+        
+        {% endfor %}
+    
+    </div>
+    <br><br>
 
 </div>
 

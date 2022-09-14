@@ -30,6 +30,10 @@ def addImage(request):
 
 @login_required(login_url='login')
 def bloodImage(request):
+    profile = request.user.profile
+    pr = profile.imageadd_set.all()
+    print(pr)
+
     if request.method == 'POST':
         form = ImageAddForm(request.POST , request.FILES)
         if form.is_valid():
@@ -39,7 +43,7 @@ def bloodImage(request):
             return redirect('bloodImage')
     else:
         form = ImageAddForm()
-    return render(request, "medical_report/blood_image_add.html",{'form':form})
+    return render(request, "medical_report/blood_image_add.html",{'form':form,'pr': pr})
 
 @login_required(login_url='login')
 def urinImage(request):

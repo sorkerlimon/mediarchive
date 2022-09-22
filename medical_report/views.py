@@ -4,6 +4,16 @@ from .models import Blood_report
 from .forms import ImageAddForm
 # Create your views here.
 
+def allimage(request):
+    profile = request.user.profile
+    pr = profile.imageadd_set.all()
+    print(pr)
+    context = {
+        'pr':pr
+    }
+    return render(request, "medical_report/allimage.html",context)
+
+
 def developer(request):
     return render(request, "medical_report/developer.html")
 
